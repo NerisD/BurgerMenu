@@ -21,3 +21,7 @@ For each item of this Todo list I create one issue. Like this is more easier to 
 * Add a view to display the total price of this wishlist 
 * Add animation when you add a new product in you wishlist 
 * Custom the UITableviewCell to be more user friendly 
+
+## Prototype
+This prototype is made with Adobe XD
+
