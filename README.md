@@ -25,3 +25,7 @@ For each item of this Todo list I create one issue. Like this is more easier to 
 ## Prototype
 This prototype is made with Adobe XD
 
+![List From API](https://user-images.githubusercontent.com/6766037/169650530-91a8472e-5397-48f8-bcd9-6d65d5b4ed11.png)     ![WishList](https://user-images.githubusercontent.com/6766037/169650538-01763936-b77e-42b0-8826-612b712356d0.png)
+
+
+
