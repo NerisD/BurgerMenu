@@ -17,7 +17,6 @@
 		759782872838F2A700809E69 /* BurgerMenu_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782862838F2A700809E69 /* BurgerMenu_AppTests.swift */; };
 		759782912838F2A700809E69 /* BurgerMenu_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782902838F2A700809E69 /* BurgerMenu_AppUITests.swift */; };
 		759782932838F2A700809E69 /* BurgerMenu_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782922838F2A700809E69 /* BurgerMenu_AppUITestsLaunchTests.swift */; };
-		759782A428390DD300809E69 /* BurgerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782A328390DD300809E69 /* BurgerList.swift */; };
 		759782A628390DE800809E69 /* Burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782A528390DE800809E69 /* Burger.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		7597828C2838F2A700809E69 /* BurgerMenu_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurgerMenu_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		759782902838F2A700809E69 /* BurgerMenu_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenu_AppUITests.swift; sourceTree = "<group>"; };
 		759782922838F2A700809E69 /* BurgerMenu_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenu_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		759782A328390DD300809E69 /* BurgerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerList.swift; sourceTree = "<group>"; };
 		759782A528390DE800809E69 /* Burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +145,6 @@
 		759782A028390D1600809E69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				759782A328390DD300809E69 /* BurgerList.swift */,
 				759782A528390DE800809E69 /* Burger.swift */,
 			);
 			path = Model;
@@ -302,7 +299,6 @@
 				759782A628390DE800809E69 /* Burger.swift in Sources */,
 				759782712838F2A600809E69 /* ViewController.swift in Sources */,
 				7597826D2838F2A600809E69 /* AppDelegate.swift in Sources */,
-				759782A428390DD300809E69 /* BurgerList.swift in Sources */,
 				7597826F2838F2A600809E69 /* SceneDelegate.swift in Sources */,
 				759782772838F2A600809E69 /* BurgerMenu_App.xcdatamodeld in Sources */,
 			);
