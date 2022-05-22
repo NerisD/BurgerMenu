@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var burgerListTableView: UITableView!
+    
+    
     var urlBurgerComponent = URLComponents()
     var burger: [Burger] = []
     
@@ -24,6 +27,8 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        burgerListTableView.delegate = self
+        burgerListTableView.dataSource = self
         getApiBugerData()
     }
     
@@ -52,7 +57,11 @@ class ViewController: UIViewController {
             let decoder = JSONDecoder()
             let result = try decoder.decode([Burger].self, from: data)
             self.burger = result
-            print(self.burger)
+            
+            DispatchQueue.main.async {
+                self.burgerListTableView.reloadData()
+            }
+            
         } catch {
             print("error with my API", error.localizedDescription)
             }
@@ -60,5 +69,22 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return burger.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "burgerCell", for: indexPath) as! BurgerCustomViewCell
+        
+        cell.burgerImage.loadImageUsingCache(with: burger[indexPath.row].thumbnail!)
+        cell.burgerTitle.text = burger[indexPath.row].title
+        cell.burgerDescription.text = burger[indexPath.row].description
+        cell.burgerPrice.text = "\(burger[indexPath.row].price!.formatnumber())"
+        
+        return cell
+    }
 }
 
