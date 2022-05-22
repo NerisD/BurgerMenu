@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7583A540283AD12E00F7E3A8 /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7583A53F283AD12E00F7E3A8 /* CacheImageView.swift */; };
+		7583A542283ADBFD00F7E3A8 /* FormatingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7583A541283ADBFD00F7E3A8 /* FormatingNumber.swift */; };
 		7597826D2838F2A600809E69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597826C2838F2A600809E69 /* AppDelegate.swift */; };
 		7597826F2838F2A600809E69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597826E2838F2A600809E69 /* SceneDelegate.swift */; };
 		759782712838F2A600809E69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782702838F2A600809E69 /* ViewController.swift */; };
@@ -17,8 +19,8 @@
 		759782872838F2A700809E69 /* BurgerMenu_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782862838F2A700809E69 /* BurgerMenu_AppTests.swift */; };
 		759782912838F2A700809E69 /* BurgerMenu_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782902838F2A700809E69 /* BurgerMenu_AppUITests.swift */; };
 		759782932838F2A700809E69 /* BurgerMenu_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782922838F2A700809E69 /* BurgerMenu_AppUITestsLaunchTests.swift */; };
-		759782A428390DD300809E69 /* BurgerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782A328390DD300809E69 /* BurgerList.swift */; };
 		759782A628390DE800809E69 /* Burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782A528390DE800809E69 /* Burger.swift */; };
+		759782A8283AC3C600809E69 /* BurgerCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759782A7283AC3C600809E69 /* BurgerCustomViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7583A53F283AD12E00F7E3A8 /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
+		7583A541283ADBFD00F7E3A8 /* FormatingNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatingNumber.swift; sourceTree = "<group>"; };
 		759782692838F2A600809E69 /* BurgerMenu_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerMenu_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7597826C2838F2A600809E69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7597826E2838F2A600809E69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +57,8 @@
 		7597828C2838F2A700809E69 /* BurgerMenu_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurgerMenu_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		759782902838F2A700809E69 /* BurgerMenu_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenu_AppUITests.swift; sourceTree = "<group>"; };
 		759782922838F2A700809E69 /* BurgerMenu_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMenu_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		759782A328390DD300809E69 /* BurgerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerList.swift; sourceTree = "<group>"; };
 		759782A528390DE800809E69 /* Burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burger.swift; sourceTree = "<group>"; };
+		759782A7283AC3C600809E69 /* BurgerCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerCustomViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +115,6 @@
 				7597829F28390D0B00809E69 /* Extension */,
 				7597826C2838F2A600809E69 /* AppDelegate.swift */,
 				7597826E2838F2A600809E69 /* SceneDelegate.swift */,
-				759782722838F2A600809E69 /* Main.storyboard */,
 				759782782838F2A700809E69 /* Assets.xcassets */,
 				7597827A2838F2A700809E69 /* LaunchScreen.storyboard */,
 				7597827D2838F2A700809E69 /* Info.plist */,
@@ -140,6 +143,8 @@
 		7597829F28390D0B00809E69 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7583A541283ADBFD00F7E3A8 /* FormatingNumber.swift */,
+				7583A53F283AD12E00F7E3A8 /* CacheImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -147,7 +152,6 @@
 		759782A028390D1600809E69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				759782A328390DD300809E69 /* BurgerList.swift */,
 				759782A528390DE800809E69 /* Burger.swift */,
 			);
 			path = Model;
@@ -156,6 +160,8 @@
 		759782A128390D1F00809E69 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				759782722838F2A600809E69 /* Main.storyboard */,
+				759782A7283AC3C600809E69 /* BurgerCustomViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,10 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7583A542283ADBFD00F7E3A8 /* FormatingNumber.swift in Sources */,
 				759782A628390DE800809E69 /* Burger.swift in Sources */,
 				759782712838F2A600809E69 /* ViewController.swift in Sources */,
+				759782A8283AC3C600809E69 /* BurgerCustomViewCell.swift in Sources */,
 				7597826D2838F2A600809E69 /* AppDelegate.swift in Sources */,
-				759782A428390DD300809E69 /* BurgerList.swift in Sources */,
+				7583A540283AD12E00F7E3A8 /* CacheImageView.swift in Sources */,
 				7597826F2838F2A600809E69 /* SceneDelegate.swift in Sources */,
 				759782772838F2A600809E69 /* BurgerMenu_App.xcdatamodeld in Sources */,
 			);
