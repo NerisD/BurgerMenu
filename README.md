@@ -35,3 +35,5 @@ This prototype is made with Adobe XD
 * The dark/ligth mode 
 * Try the app on other diveces (iPad, other iPhone size)
 * Landscape Mode
+* Take time to write more UnitTest 
+* Take time to write more UITest 
