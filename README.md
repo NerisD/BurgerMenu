@@ -22,6 +22,11 @@ For each item of this Todo list I create one issue. Like this is more easier to 
 * Add animation when you add a new product in you wishlist 
 * Custom the UITableviewCell to be more user friendly 
 
+## Technology I Used 
+* **CoreData :** To have persistent data for the wishlist
+* **UIKit :** To display all UI element with storyboard  
+* **Conception Model :** MVC
+
 ## Prototype
 This prototype is made with Adobe XD
 
