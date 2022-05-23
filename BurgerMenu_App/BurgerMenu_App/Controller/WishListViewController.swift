@@ -19,6 +19,9 @@ class WishListViewController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var messageLabel: UILabel!
     
+    var priceToPayForOneBurger = 0.0
+    var totalPriceToPay = 0.0
+    
     
     
     
@@ -68,6 +71,9 @@ class WishListViewController: UIViewController {
             }
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        updateView()
+    }
     
     private func setupView() {
         setupMessageLabel()
@@ -90,6 +96,11 @@ class WishListViewController: UIViewController {
     
     private func setupMessageLabel() {
         messageLabel.text = "You don't have any burger yet."
+    }
+    
+    private func updateTotalPrice() {
+        totalPriceToPay = totalPriceToPay + priceToPayForOneBurger
+        wlTotalToPay.text = Int(totalPriceToPay).formatnumber()
     }
     
 }
@@ -162,8 +173,13 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.wlBurgerImage.loadImageUsingCache(with: burgerMenuDB.thumbnail!)
         cell.wlBurgerTitleLabel.text = burgerMenuDB.title
         cell.wlBurgerDescriptionLabel.text = burgerMenuDB.details
-        cell.wlUnitPriceLabel.text = burgerMenuDB.price
+        cell.wlUnitPriceLabel.text = "\((Int(burgerMenuDB.price)).formatnumber())"
         cell.wlTotalUnitLabel.text = String(burgerMenuDB.nombre)
+        
+        priceToPayForOneBurger = Double(burgerMenuDB.nombre * burgerMenuDB.price)
+        
+        updateTotalPrice()
+        
         
         return cell
     }

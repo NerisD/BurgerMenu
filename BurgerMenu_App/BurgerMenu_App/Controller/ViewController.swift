@@ -105,7 +105,7 @@ class ViewController: UIViewController {
                                 burgerToCoreData.ref = burger[indexPath.row].ref
                                 burgerToCoreData.thumbnail = burger[indexPath.row].thumbnail
                                 burgerToCoreData.title = burger[indexPath.row].title
-                                burgerToCoreData.price = "\(burger[indexPath.row].price!.formatnumber())"
+                                burgerToCoreData.price = Int64(burger[indexPath.row].price!)
                                 burgerToCoreData.details = burger[indexPath.row].description
                                 
                                 do {
