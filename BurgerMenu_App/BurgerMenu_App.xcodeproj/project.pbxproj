@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751CCF1F283B8A11004ECEF2 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751CCF1E283B8A11004ECEF2 /* WishListViewController.swift */; };
+		751CCF21283B8B70004ECEF2 /* WishListCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751CCF20283B8B70004ECEF2 /* WishListCustomViewCell.swift */; };
+		751CCF23283B8B8E004ECEF2 /* PayWishListCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751CCF22283B8B8E004ECEF2 /* PayWishListCustomView.swift */; };
 		7583A540283AD12E00F7E3A8 /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7583A53F283AD12E00F7E3A8 /* CacheImageView.swift */; };
 		7583A542283ADBFD00F7E3A8 /* FormatingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7583A541283ADBFD00F7E3A8 /* FormatingNumber.swift */; };
 		7597826D2838F2A600809E69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597826C2838F2A600809E69 /* AppDelegate.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		751CCF1E283B8A11004ECEF2 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		751CCF20283B8B70004ECEF2 /* WishListCustomViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListCustomViewCell.swift; sourceTree = "<group>"; };
+		751CCF22283B8B8E004ECEF2 /* PayWishListCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWishListCustomView.swift; sourceTree = "<group>"; };
 		7583A53F283AD12E00F7E3A8 /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
 		7583A541283ADBFD00F7E3A8 /* FormatingNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatingNumber.swift; sourceTree = "<group>"; };
 		759782692838F2A600809E69 /* BurgerMenu_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerMenu_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				759782722838F2A600809E69 /* Main.storyboard */,
+				751CCF20283B8B70004ECEF2 /* WishListCustomViewCell.swift */,
+				751CCF22283B8B8E004ECEF2 /* PayWishListCustomView.swift */,
 				759782A7283AC3C600809E69 /* BurgerCustomViewCell.swift */,
 			);
 			path = View;
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				759782702838F2A600809E69 /* ViewController.swift */,
+				751CCF1E283B8A11004ECEF2 /* WishListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -311,8 +320,11 @@
 				759782A8283AC3C600809E69 /* BurgerCustomViewCell.swift in Sources */,
 				7597826D2838F2A600809E69 /* AppDelegate.swift in Sources */,
 				7583A540283AD12E00F7E3A8 /* CacheImageView.swift in Sources */,
+				751CCF21283B8B70004ECEF2 /* WishListCustomViewCell.swift in Sources */,
 				7597826F2838F2A600809E69 /* SceneDelegate.swift in Sources */,
+				751CCF1F283B8A11004ECEF2 /* WishListViewController.swift in Sources */,
 				759782772838F2A600809E69 /* BurgerMenu_App.xcdatamodeld in Sources */,
+				751CCF23283B8B8E004ECEF2 /* PayWishListCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

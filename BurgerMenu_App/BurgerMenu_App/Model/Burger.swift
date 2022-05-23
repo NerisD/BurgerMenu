@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Burger: Decodable {
+struct Burger: Codable {
     var ref: String?
     var title: String?
     var description: String?
