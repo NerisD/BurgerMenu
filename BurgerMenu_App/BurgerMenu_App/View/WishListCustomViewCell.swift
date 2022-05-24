@@ -18,8 +18,4 @@ class WishListCustomViewCell: UITableViewCell {
     @IBOutlet weak var wlBurgerDescriptionLabel: UILabel!
     @IBOutlet weak var wlUnitPriceLabel: UILabel!
     @IBOutlet weak var wlTotalUnitLabel: UILabel!
-    
-    
-    
-    
 }

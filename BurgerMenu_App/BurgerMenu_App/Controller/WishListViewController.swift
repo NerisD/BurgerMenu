@@ -19,6 +19,12 @@ class WishListViewController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var messageLabel: UILabel!
     
+    var appDelegate: AppDelegate!
+    var context: NSManagedObjectContext!
+    var burgers:[NSManagedObject] = []
+    var wlBurgers = [Burger]()
+    let fetchRequest = NSFetchRequest<NSManagedObject> (entityName: "BurgerMenuDB")
+    
     var priceToPayForOneBurger = 0.0
     var totalPriceToPay = 0.0
     
@@ -70,9 +76,24 @@ class WishListViewController: UIViewController {
                 self.updateView()
             }
         }
+        
+        updateView()
+        updateTotalPrice()
     }
     override func viewWillAppear(_ animated: Bool) {
-        updateView()
+        
+        DispatchQueue.main.async {
+            self.appDelegate = UIApplication.shared.delegate as? AppDelegate
+            self.context = self.appDelegate.persistentContainer.viewContext
+            
+            do {
+                self.burgers = try self.context.fetch(self.fetchRequest)
+                
+            } catch {
+                print("Error for Entity initialisation \(error)")
+            }
+            
+        }
     }
     
     private func setupView() {
@@ -98,9 +119,33 @@ class WishListViewController: UIViewController {
         messageLabel.text = "You don't have any burger yet."
     }
     
+    @objc private func minusButtonTapped(sender:UIButton) {
+        print("Minus button tapped")
+        
+        
+    }
+    @objc private func plusButtonTapped(sender:UIButton) {
+        print("Plus button tapped")
+        
+        
+    }
+    
     private func updateTotalPrice() {
-        totalPriceToPay = totalPriceToPay + priceToPayForOneBurger
-        wlTotalToPay.text = Int(totalPriceToPay).formatnumber()
+        print("Calculate the SubPrice")
+        var total_price = 0
+        
+        guard let burgers = fetchedResultsController.fetchedObjects else { return }
+        if burgers.count == 0 {
+            return
+        } else {
+            for i in 0...burgers.count-1 {
+                let price = burgers[i].price
+                total_price += Int(price) * Int(burgers[i].nombre)
+            }
+        }
+
+        wlTotalToPay.text = total_price.formatnumber()
+
     }
     
 }
@@ -167,7 +212,7 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("Unexpected Index Path")
         }
         
-        // Fetch Quote
+        // Fetch Burger
         let burgerMenuDB = fetchedResultsController.object(at: indexPath)
         
         cell.wlBurgerImage.loadImageUsingCache(with: burgerMenuDB.thumbnail!)
@@ -176,9 +221,11 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.wlUnitPriceLabel.text = "\((Int(burgerMenuDB.price)).formatnumber())"
         cell.wlTotalUnitLabel.text = String(burgerMenuDB.nombre)
         
-        priceToPayForOneBurger = Double(burgerMenuDB.nombre * burgerMenuDB.price)
+        cell.minusButton.tag = indexPath.row
+        cell.minusButton.addTarget(self, action: #selector(minusButtonTapped(sender:)), for: .touchUpInside)
         
-        updateTotalPrice()
+        cell.plusButton.tag = indexPath.row
+        cell.plusButton.addTarget(self, action: #selector(plusButtonTapped(sender:)), for: .touchUpInside)
         
         
         return cell
